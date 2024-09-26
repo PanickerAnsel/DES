@@ -14,4 +14,6 @@ int main() {
   for (int i = 0; i < sub_keys.size(); i++) {
     cout << sub_keys[i] << endl;
   }
+  string yes = shift_left("1001001");
+  cout << yes <<endl;
 }
