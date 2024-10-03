@@ -12,7 +12,6 @@ for(int i = 0; i < n-1; i++)
 {
     
     sub_key[i] = sub_key[i + 1];
-    cout << sub_key[i]<< endl;
 }
 sub_key[n-1] = temp;
     return sub_key;
@@ -60,7 +59,7 @@ vector<string> key_gen(string key) {
         sub_keys.push_back(sub_key);
     
 
-    //return sub_keys;
+    
 }
 return sub_keys;
 }
