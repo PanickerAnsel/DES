@@ -45,14 +45,22 @@ vector<string> key_gen(string key) {
     string D = permuted_key.substr(28, 28);
 
     for (int round = 0; round < 16; round++) {
-        for (int shift = 0; shift < SHIFT_SCHEDULE[round]; shift++) {
+        if (SHIFT_SCHEDULE[round] == 1){
             C = shift_left(C);
             D = shift_left(D);
+        }
+        else{
+            C = shift_left(C);
+            C = shift_left(C);
+            D = shift_left(D);
+            D = shift_left(D);
+        }
         string combined = C + D;
         string sub_key = PC2Apply(combined);
         sub_keys.push_back(sub_key);
-    }
+    
 
-    return sub_keys;
+    //return sub_keys;
 }
+return sub_keys;
 }
